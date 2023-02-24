@@ -12,7 +12,9 @@ public class  UtilisateurService implements UtilisateurImpService{
     @Autowired
     UtilisateurSimpleRepository utilisateurSimpleRepository;
 
+    @Override
     public void add( UtilisateurSimple user){utilisateurSimpleRepository.save(user);}
+    @Override
     public List<UtilisateurSimple> getAll(){
         return utilisateurSimpleRepository.findAll();
     }
